@@ -9,7 +9,10 @@ package com.epam;
 public record CalcServiceRecord(int a, int b) {
 
     public int add() {
-        return a + b;
+        int first = a;
+        int second = b;
+        return first + second;
+
     }
 
     public int multiply() {
@@ -32,6 +35,7 @@ public record CalcServiceRecord(int a, int b) {
         int result = a / b;
 
         return result;
+
 
     }
 }
