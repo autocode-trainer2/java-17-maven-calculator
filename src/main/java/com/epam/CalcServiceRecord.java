@@ -9,6 +9,7 @@ package com.epam;
 public record CalcServiceRecord(int a, int b) {
 
     public int add() {
+        recursivePrint(1);
         return a + b;
     }
 
@@ -27,4 +28,12 @@ public record CalcServiceRecord(int a, int b) {
         return a / b;
 
     }
+
+    public void recursivePrint(int num) {
+        if (num != 0) {
+            recursivePrint(++num);
+        }
+
+    }
+
 }
