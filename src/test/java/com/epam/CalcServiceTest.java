@@ -6,38 +6,35 @@
  */
 package com.epam;
 
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class CalcServiceTest {
-    private static CalcService calcService;
-
-    @BeforeAll
-    static void setUp() {
-        calcService = new CalcServiceImpl();
-    }
-
     @Test
     void addTest() {
-        assertEquals(4, calcService.add(1, 3));
+        var calcService = new CalcServiceRecord(1, 3);
+        assertEquals(4, calcService.add());
     }
 
     @Test
     void multiplyTest() {
-        assertEquals(16, calcService.multiply(2, 8));
+        var calcService = new CalcServiceRecord(2, 8);
+        assertEquals(16, calcService.multiply());
     }
 
     @Test
     void subtractTest() {
-        assertEquals(0, calcService.subtract(2, 2));
+        var calcService = new CalcServiceRecord(3, 2);
+        assertEquals(1, calcService.subtract());
     }
 
     @Test
     void divideTest() {
-        assertEquals(3, calcService.divide(6, 2));
-        assertEquals(0, calcService.divide(5, 0));
+        var calcService = new CalcServiceRecord(6, 2);
+        assertEquals(3, calcService.divide());
+        calcService = new CalcServiceRecord(5, 0);
+        assertEquals(0, calcService.divide());
     }
 }
 

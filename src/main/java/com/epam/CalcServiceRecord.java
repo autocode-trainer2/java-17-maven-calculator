@@ -6,13 +6,21 @@
  */
 package com.epam;
 
-public interface CalcService {
-    int add(int a, int b);
+public record CalcServiceRecord(int a, int b) {
 
-    int multiply(int a, int b);
+    public int add() {
+        return 0;
+    }
 
-    int subtract(int a, int b);
+    public int multiply() {
+        return 0;
+    }
 
-    int divide(int a, int b);
+    public int subtract() {
+        return 0;
+    }
+
+    public int divide() {
+        return 0;
+    }
 }
-
