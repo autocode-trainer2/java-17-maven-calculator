@@ -12,7 +12,6 @@ public record CalcServiceRecord(int a, int b) {
         int first = a;
         int second = b;
         return first + second;
-
     }
 
     public int multiply() {
@@ -21,7 +20,6 @@ public record CalcServiceRecord(int a, int b) {
             isNegative = true;
         }
         return a * b;
-
     }
 
     public int subtract() {
@@ -33,9 +31,6 @@ public record CalcServiceRecord(int a, int b) {
             return 0;
         }
         int result = a / b;
-
         return result;
-
-
     }
 }
