@@ -27,4 +27,4 @@ public record CalcServiceRecord(int a, int b) {
         return a / b;
 
     }
-}
+} }
