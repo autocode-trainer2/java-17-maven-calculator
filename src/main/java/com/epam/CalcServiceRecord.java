@@ -21,10 +21,6 @@ public record CalcServiceRecord(int a, int b) {
     }
 
     public int divide() {
-        if (b == 0) {
-            return 0;
-        }
         return a / b;
-
     }
 }
