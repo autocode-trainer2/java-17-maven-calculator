@@ -9,11 +9,15 @@ package com.epam;
 public record CalcServiceRecord(int a, int b) {
 
     public int add() {
+        var c = a + b;
         return a + b;
+
     }
 
     public int multiply() {
-        return a * b;
+        int c = a * b;
+        return c;
+
     }
 
     public int subtract() {
@@ -21,10 +25,6 @@ public record CalcServiceRecord(int a, int b) {
     }
 
     public int divide() {
-        if (b == 0) {
-            return 0;
-        }
         return a / b;
-
     }
 }
