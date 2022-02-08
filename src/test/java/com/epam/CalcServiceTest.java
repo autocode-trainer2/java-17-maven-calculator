@@ -11,6 +11,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class CalcServiceTest {
+    /*
+    Student tests
+     */
     @Test
     void addTest() {
         var calcService = new CalcServiceRecord(1, 3);
