@@ -6,6 +6,7 @@
  */
 package com.epam;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -30,11 +31,33 @@ class CalcServiceTest {
     }
 
     @Test
+    @DisplayName("DisplayName English")
     void divideTest() {
         var calcService = new CalcServiceRecord(6, 2);
         assertEquals(3, calcService.divide());
         calcService = new CalcServiceRecord(5, 0);
         assertEquals(0, calcService.divide());
     }
+
+    @Test
+    @DisplayName("Тест для проверки русских символов в тестах")
+    void russianLayoutTest() {
+        assertEquals(5, 2+2, "2 + 2 не равно 5, пока ещё");
+    }
+
+    @Test
+    @DisplayName("Другой тест для проверки русских символов в тестах")
+    void russianLayoutTest2() {
+        var actual = "Не ожидаемая строка на русском";
+        assertEquals("Ожидаемая строка на русском", actual);
+    }
+
+    @Test
+    @DisplayName("Успешный тест для проверки русских символов в тестах")
+    void russianLayoutTest3() {
+        var actual = "Ожидаемая строка на русском";
+        assertEquals("Ожидаемая строка на русском", actual);
+    }
+
 }
 
