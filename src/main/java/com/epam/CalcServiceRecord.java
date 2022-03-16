@@ -13,6 +13,9 @@ public record CalcServiceRecord(int a, int b) {
     }
 
     public int multiply() {
+        int abc;
+        int bca = 100;
+
         return a * b;
     }
 

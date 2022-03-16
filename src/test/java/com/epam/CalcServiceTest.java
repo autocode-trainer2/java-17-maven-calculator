@@ -27,16 +27,8 @@ class CalcServiceTest {
     }
 
     @Test
-    void subtractTest() {
-        var calcService = new CalcServiceRecord(3, 2);
-        assertEquals(1, calcService.subtract());
-    }
-
-    @Test
     void divideTest() {
-        var calcService = new CalcServiceRecord(6, 2);
-        assertEquals(3, calcService.divide());
-        calcService = new CalcServiceRecord(5, 0);
+        var calcService = new CalcServiceRecord(5, 0);
         assertEquals(0, calcService.divide());
     }
 }
